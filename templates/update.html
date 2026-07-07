@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+{% block title %} Update {% endblock title %} 
+{% block body %}
+
+<div class="d-flex justify-content-center align-items-center mt-4 text-center">
+  <div class="col-lg-5 h-100">
+      <div class="bg-dark text-white border-0 shadow p-4 p-lg-5 rounded-4 d-flex flex-column justify-content-center" style="min-height: 580px;">
+        <h3 class="text-center fs-1 fw-bold mb-4">
+          <i class="me-2"></i>Update Task
+        </h3>
+        <form action="/update/{{todo.sno}}" method="POST">
+          <div class="mb-4 text-start">
+            <label for="title" class="form-label">To-Do Title</label>
+            <input type="text" class="form-control" value="{{todo.title}}" id="title" name="title" aria-describedby="emailHelp" />
+          </div>
+          <div class="mb-4 text-start">
+            <label for="description" class="form-label">To-Do Description</label>
+            <input type="text" name="desc" value="{{todo.Description}}" class="form-control" id="description" />
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-light btn-sm">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+ </div>
+
+{% endblock body %}

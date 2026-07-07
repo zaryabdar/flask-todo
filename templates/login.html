@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+
+{% block body %}
+
+<div class="container auth-page pt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-5 col-md-7">
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <div class="bg-dark text-white d-flex flex-column justify-content-center align-item-center border-0 shadow-sm p-4 p-lg-5 rounded-4" style="height: 500px;">
+        <h3 class="text-center fw-bold mb-4">
+          <i class="bi bi-box-arrow-in-right me-2"></i>Log In
+        </h3>
+
+        <form action="/login" method="POST">
+          <div class="mb-3 text-start">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username" required />
+          </div>
+          <div class="mb-4 text-start">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required />
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-light btn-sm py-2">Log In</button>
+          </div>
+        </form>
+
+        <p class="text-center mt-4 mb-0 small">
+          Don't have an account?
+          <a href="/" class="text-white text-decoration-underline">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

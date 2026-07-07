@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}About {% endblock %}
+
+{% block body %}
+<div class="container my-5 overflow-hidden">
+  <div class="p-5 mt-3 mb-5 bg-dark text-white rounded-2 shadow text-center">
+    <h1 class="display-5 fw-bold">📝 About My Todo</h1>
+    <p class="lead mb-0">A simple, fast way to keep track of what matters.</p>
+  </div>
+ 
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+      <div class="card shadow-sm border-0">
+        <div class="card-body p-4">
+          <h2 class="h4 card-title mb-3">
+            <i class="bi bi-info-circle-fill me-2"></i>What is My Todo?
+          </h2>
+          <p class="card-text text-muted mb-0">
+            My Todo is a lightweight task management web app built with
+            <strong>Flask</strong> (Python) on the backend and
+            <strong>Bootstrap</strong> for a clean, responsive interface.
+            It helps you add, organize, and track your daily tasks so nothing
+            slips through the cracks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+      <h2 class="h4 mb-4 text-center">
+        <i class="bi bi-list-check me-2"></i>How to use it
+      </h2>
+ 
+      <div class="row g-3">
+ 
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <span class="badge bg-dark rounded-circle p-3 mb-3 fs-6">1</span>
+              <h3 class="h6 card-title fw-bold">Create an account / Log in</h3>
+              <p class="card-text text-muted small mb-0">Sign up with your email or log in if you already have an account.</p>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <span class="badge bg-dark rounded-circle p-3 mb-3 fs-6">2</span>
+              <h3 class="h6 card-title fw-bold">Add a task</h3>
+              <p class="card-text text-muted small mb-0">Use the input box on your dashboard to type a task and click "Add".</p>
+            </div>
+          </div>
+        </div>
+
+ 
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <span class="badge bg-dark rounded-circle p-3 mb-3 fs-6">4</span>
+              <h3 class="h6 card-title fw-bold">Edit or delete tasks</h3>
+              <p class="card-text text-muted small mb-0">Use the edit (pencil) icon to update a task, or the trash icon to remove it.</p>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <span class="badge bg-dark rounded-circle p-3 mb-3 fs-6">5</span>
+              <h3 class="h6 card-title fw-bold">Stay organized</h3>
+              <p class="card-text text-muted small mb-0">Your tasks are saved to your account, so you can log in from anywhere and pick up where you left off.</p>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+ 
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4 text-center">
+          <h2 class="h4 card-title mb-3">
+            <i class="bi bi-tools me-2"></i>Built with
+          </h2>
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <span class="badge bg-dark p-2 px-3 fs-6">Python</span>
+            <span class="badge bg-dark p-2 px-3 fs-6">Flask</span>
+            <span class="badge bg-dark p-2 px-3 fs-6">Bootstrap</span>
+            <span class="badge bg-dark p-2 px-3 fs-6">SQLite / SQLAlchemy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="text-center">
+    <a href="/" class="btn btn-dark btn-lg px-4 rounded-pill shadow-sm">
+      <i class="bi bi-arrow-left-circle me-2"></i>Back to My Todo
+    </a>
+  </div>
+ 
+</div>
+</div>
+{% endblock body %}
